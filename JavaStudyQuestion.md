@@ -1,6 +1,6 @@
 ### 使用javac再本地终端运行乱码
 
-![image-20250217110535029](JavaStudyQuestion.assest/image-20250217110535029.png)
+![image-20250217110535029](JavaStudyQuestion.assets/image-20250217110535029.png)
 
 这个问题的根本原因是 **文件编码不匹配**。Java文件可能是以 **UTF-8** 编码保存的，但 `javac` 编译器默认使用的是 **GBK** 编码，导致无法正确解析文件中的中文字符。
 
@@ -23,5 +23,5 @@ javac -encoding UTF-8 test2.java
 - 在 Notepad++ 中：点击菜单栏的“编码” -> “转为 ANSI”（ANSI 在中文 Windows 下就是 GBK）。
 - 在 VS Code 中：点击右下角的编码（如 UTF-8），选择“通过编码保存”，然后选择 **GBK**。
 
-![image-20250217111754702](JavaStudyQuestion/image-20250217111754702.png)
+![image-20250217111754702](JavaStudyQuestion.assets/image-20250217111754702.png)
 
