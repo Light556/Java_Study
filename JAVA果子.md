@@ -68,9 +68,9 @@ exit
 
 ***例：***
 
-![image-20250104200142610](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250104200142610.png)
+![image-20250104200142610](JAVA果子.assets/image-20250104200142610.png)
 
-![image-20250104200130479](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250104200130479.png)
+![image-20250104200130479](JAVA果子.assets/image-20250104200130479.png)
 
 配置完成后切记重新打开cmd，类似更新当前环境。
 
