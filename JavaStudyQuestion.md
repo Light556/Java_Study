@@ -1,6 +1,6 @@
 ### 使用javac再本地终端运行乱码
 
-![image-20250217110535029](JavaStudyQuestion/image-20250217110535029.png)
+![image-20250217110535029](JavaStudyQuestion.assest/image-20250217110535029.png)
 
 这个问题的根本原因是 **文件编码不匹配**。Java文件可能是以 **UTF-8** 编码保存的，但 `javac` 编译器默认使用的是 **GBK** 编码，导致无法正确解析文件中的中文字符。
 
