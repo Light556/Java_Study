@@ -68,9 +68,9 @@ exit
 
 ***例：***
 
-![image-20250104200142610](JAVA果子.assets/image-20250104200142610.png)
+![image-20250104200142610](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250104200142610.png)
 
-![image-20250104200130479](JAVA果子.assets/image-20250104200130479.png)
+![image-20250104200130479](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250104200130479.png)
 
 配置完成后切记重新打开cmd，类似更新当前环境。
 
@@ -132,7 +132,7 @@ public class test{
 
 ***例：***
 
-![image-20250104225313686](JAVA果子.assets/image-20250104225313686.png)
+![image-20250104225313686](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250104225313686.png)
 
 
 
@@ -140,11 +140,11 @@ public class test{
 
 虽然安装时会自动配置，但是只支持最基本的四个组件。需要使用其他组件的时候需要自己配置环境变量。如下所示
 
-![image-20250105194842642](JAVA果子.assets/image-20250105194842642.png)
+![image-20250105194842642](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250105194842642.png)
 
 
 
-![image-20250105194928979](JAVA果子.assets/image-20250105194928979.png)
+![image-20250105194928979](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250105194928979.png)
 
 
 
@@ -260,13 +260,13 @@ public class test{
 
 使用CMD的输出效果
 
-![image-20250109190829892](JAVA果子.assets/image-20250109190829892.png)
+![image-20250109190829892](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109190829892.png)
 
 
 
 使用Idea的输出效果
 
-![image-20250109190856255](JAVA果子.assets/image-20250109190856255.png)
+![image-20250109190856255](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109190856255.png)
 
 原因：在 **IDE 中**，制表符的效果受到 **编辑器设置和字体** 的影响。制表符的跳跃不一定是 8 字符的倍数，而是基于当前的显示设置（比如字体的宽度和行距）。这意味着如果你在字符串中使用制表符，制表符会根据当前的光标位置跳到下一个显示的制表位，而这个跳跃的间隔可能不是固定的。制表符（`\t`）并非所有环境都能完美地显示对齐。在 IDEA 或其他开发工具的控制台中，它可能并不会完全按照每 8 个字符的规则进行跳转，而是根据当前光标位置选择一个合适的对齐方式，这可能导致像 `haohao` 和 `23` 之间的位置看起来不一致。
 
@@ -305,11 +305,11 @@ public class test{
 
 ### 各进制的转换方法
 
-![image-20250109194921469](JAVA果子.assets/image-20250109194921469.png)
+![image-20250109194921469](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109194921469.png)
 
 
 
-![image-20250109195328498](JAVA果子.assets/image-20250109195328498.png)
+![image-20250109195328498](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109195328498.png)
 
 
 
@@ -418,11 +418,11 @@ public class VariableTest {
 }
 ```
 
-![image-20250217114216082](JAVA果子.assets/image-20250217114216082.png)
+![image-20250217114216082](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217114216082.png)
 
 ### 存在的问题
 
-![image-20250217110535029](JAVA果子.assets/image-20250217110535029.png)
+![image-20250217110535029](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217110535029.png)
 
 这个问题的根本原因是 **文件编码不匹配**。Java文件可能是以 **UTF-8** 编码保存的，但 `javac` 编译器默认使用的是 **GBK** 编码，导致无法正确解析文件中的中文字符。
 
@@ -445,7 +445,7 @@ javac -encoding UTF-8 test2.java
 - 在 Notepad++ 中：点击菜单栏的“编码” -> “转为 ANSI”（ANSI 在中文 Windows 下就是 GBK）。
 - 在 VS Code 中：点击右下角的编码（如 UTF-8），选择“通过编码保存”，然后选择 **GBK**。
 
-![image-20250217111754702](JAVA果子.assets/image-20250217111754702.png)
+![image-20250217111754702](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217111754702.png)
 
 
 
@@ -522,52 +522,29 @@ public class ScannerDemo {
 }
 ```
 
-![image-20250217144015563](JAVA果子.assets/image-20250217144015563.png)
+![image-20250217144015563](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217144015563.png)
 
 
 
 ## 算数运算符
 
 ```JAVA
-package JAVA_accident;
+package Java_Concept;
 
-public class ArithmeticoperatorDemo2 {
+public class ArithmeticoperatorDemo {
     public static void main(String[] args) {
 
-        // 除法
-        System.out.println(10 / 2); // 5
-        System.out.println(10 / 3); // 3
-        System.out.println(10.0 / 3); // 3.3333333333333335
+        System.out.println(3 + 2); // 5
 
+        System.out.println(5 - 1); // 4
 
-        // 取模, 取余。实际上也是做除法运算，只不过得到的是余数罢了
-        System.out.println(10 % 2); // 0
-        System.out.println(10 % 3); // 1
-        System.out.println(10 % 4); // 2
+        System.out.println(3 * 2); // 6
 
-        // 应用场景
-        // 1. 可以用模来判断A是否能被B整除
-        System.out.println(10 % 2 == 0); // true
-        System.out.println(10 % 3 == 0); // false
-
-        // 2. 可以用模来判断一个数的奇偶性
-        System.out.println(10 % 2 == 0); // false
-        System.out.println(11 % 2 == 0); // true
-
-        // 斗地主发牌
-        // 将序号 %3 如果得到的结果是1，那么就发给第一个玩家
-        // 如果得到的结果是2，那么就发给第二个玩家
-        // 如果得到的结果是0，那么就发给第三个玩家
-        for (int i = 1; i <= 54; i++) {
-            int player = i % 3;
-            // 如果player是0，那么就将其修改为3
-            if(player == 0){
-                player = 3;
-            }
-            System.out.println("第" + i + "张牌发给了第" + player + "个玩家");
-        }
-
-
+        // 如果计算的时候有小数参与,结果有可能不准确。后续会单独讲解，涉及到小数在计算机中的存储模式
+        System.out.println(1.1 + 1.1);  // 2.2
+        System.out.println(1.1 + 1.01); // 2.1100000000000003
+        System.out.println(1.1 - 1.01); // 0.09000000000000008
+        System.out.println(1.1 * 1.01); // 1.1110000000000002
     }
 }
 ```
@@ -649,7 +626,7 @@ public class ArithmeticoperatorDemo2 {
 
 ### 隐式转换的两种提升规则
 
-![image-20250221103033942](JAVA果子.assets/image-20250221103033942.png)
+![image-20250221103033942](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250221103033942.png)
 
 数据类型不一样不能进行计算，需要转换成相同的数据才能进行计算
 
@@ -657,9 +634,9 @@ public class ArithmeticoperatorDemo2 {
 
 ### 强制转换
 
-![image-20250221105226896](JAVA果子.assets/image-20250221105226896.png)
+![image-20250221105226896](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250221105226896.png)
 
-![image-20250221105238924](JAVA果子.assets/image-20250221105238924.png)
+![image-20250221105238924](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250221105238924.png)
 
 ```Java
 byte b1 = 10;
@@ -719,7 +696,7 @@ int x = 10;
 
 ### **赋值运算符**
 
-![image-20250224111259589](JAVA果子.assets/image-20250224111259589.png)
+![image-20250224111259589](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250224111259589.png)
 
 ```JAVA
 	    //+=
@@ -763,7 +740,7 @@ int x = 10;
 
 ### **关系运算符**
 
-![image-20250224112346466](JAVA果子.assets/image-20250224112346466.png)
+![image-20250224112346466](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250224112346466.png)
 
 ```JAVA
 //  == 判断左右两边是否相等
@@ -826,6 +803,120 @@ public class OperatorTest {
 
 
 ### 逻辑运算符
+
+![image-20250226102226558](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250226102226558.png)
+
+```JAVA
+package Java_Concept;
+
+public class LogicOperationDemo {
+    public static void main(String[] args) {
+         // & 并且
+         // 两边都为真，结果才是真
+         System.out.println(true & true); // true
+         System.out.println(false & false); // false
+         System.out.println(true & false); // false
+         System.out.println(false & true); // false
+
+        // | 或者
+        // 两边只要有一个为真，结果就是真
+        System.out.println(true | true); // true
+        System.out.println(false | false); // false
+        System.out.println(true | false); // true
+        System.out.println(false | true); // true
+
+        // ^ 异或
+        // 两边相同，结果为假
+        // 两边不相同，结果为真
+        System.out.println(true ^ true); // false
+        System.out.println(false ^ false); // false
+        System.out.println(true ^ false); // true
+        System.out.println(false ^ true); // true
+
+        // ! 非
+        // 真变假，假变真
+        // 取反的感叹号不要多次使用，要么不写，要么就写一次
+        System.out.println(!true); // false
+        System.out.println(!false); // true
+    }
+}
+```
+
+
+
+###  短路逻辑运算符
+
+![image-20250226110241489](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250226110241489.png)
+
+```java
+package Java_Concept;
+
+public class LogicOperationDemo2 {
+    public static void main(String[] args) {
+        // 1. &&
+        // 运行结果跟单个&是一样的
+        // 表示两边都为真，结果才是真
+        System.out.println(true && true); // true
+        System.out.println(false && false); // false
+        System.out.println(true && false); // false
+        System.out.println(false && true); // false
+
+        // 2. ||
+        // 运行结果跟单个|是一样的
+        // 表示两边只要有一个为真，结果就是真
+        System.out.println(true || true); // true
+        System.out.println(false || false); // false
+        System.out.println(true || false); // true
+        System.out.println(false || true); // true
+
+        // 3.短路逻辑运算符具有短路效果
+        // 简单理解:当左边的表达式能确定最终的结果，那么右边就不会参与运行了
+        int a = 10;
+        int b = 10;
+        boolean result = ++a < 5 && ++b < 5; // 因为左边判断已经是错的 所以右边就不会再判断了，也不会运行了
+        System.out.println(result);
+        System.out.println(a); // 11
+        System.out.println(b); // 10
+
+    }
+}
+```
+
+![image-20250226112305720](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250226112305720.png)
+
+**Test**
+
+```java
+package Test;
+
+import java.util.Scanner;
+
+public class LogicOperationTest {
+    public static void main(String[] args) {
+        // 键盘输入两个整数，如果一个数字为6，最终结果输出true，如果它们的和为6的倍数，最终结果也输出true，其他情况均输出false.
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入一个整数：");
+
+        int a = sc.nextInt();
+
+        System.out.println("再输入一个整数：");
+
+        int b = sc.nextInt();
+
+//        if(a == 6 || b == 6){
+//            System.out.println(true);
+//        }else System.out.println((a + b) % 6 == 0);
+
+        boolean result = a == 6 || b == 6 || (a+b) % 6 == 0;
+        System.out.println(result);
+
+    }
+}
+```
+
+
+
+### 三元运算符
 
 
 
