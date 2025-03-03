@@ -68,9 +68,9 @@ exit
 
 ***例：***
 
-![image-20250104200142610](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250104200142610.png)
+![image-20250104200142610](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250104200142610.png)
 
-![image-20250104200130479](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250104200130479.png)
+![image-20250104200130479](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250104200130479.png)
 
 配置完成后切记重新打开cmd，类似更新当前环境。
 
@@ -132,7 +132,7 @@ public class test{
 
 ***例：***
 
-![image-20250104225313686](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250104225313686.png)
+![image-20250104225313686](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250104225313686.png)
 
 
 
@@ -140,11 +140,11 @@ public class test{
 
 虽然安装时会自动配置，但是只支持最基本的四个组件。需要使用其他组件的时候需要自己配置环境变量。如下所示
 
-![image-20250105194842642](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250105194842642.png)
+![image-20250105194842642](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250105194842642.png)
 
 
 
-![image-20250105194928979](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250105194928979.png)
+![image-20250105194928979](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250105194928979.png)
 
 
 
@@ -260,13 +260,13 @@ public class test{
 
 使用CMD的输出效果
 
-![image-20250109190829892](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109190829892.png)
+![image-20250109190829892](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109190829892.png)
 
 
 
 使用Idea的输出效果
 
-![image-20250109190856255](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109190856255.png)
+![image-20250109190856255](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109190856255.png)
 
 原因：在 **IDE 中**，制表符的效果受到 **编辑器设置和字体** 的影响。制表符的跳跃不一定是 8 字符的倍数，而是基于当前的显示设置（比如字体的宽度和行距）。这意味着如果你在字符串中使用制表符，制表符会根据当前的光标位置跳到下一个显示的制表位，而这个跳跃的间隔可能不是固定的。制表符（`\t`）并非所有环境都能完美地显示对齐。在 IDEA 或其他开发工具的控制台中，它可能并不会完全按照每 8 个字符的规则进行跳转，而是根据当前光标位置选择一个合适的对齐方式，这可能导致像 `haohao` 和 `23` 之间的位置看起来不一致。
 
@@ -305,11 +305,11 @@ public class test{
 
 ### 各进制的转换方法
 
-![image-20250109194921469](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109194921469.png)
+![image-20250109194921469](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109194921469.png)
 
 
 
-![image-20250109195328498](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109195328498.png)
+![image-20250109195328498](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109195328498.png)
 
 
 
@@ -418,11 +418,11 @@ public class VariableTest {
 }
 ```
 
-![image-20250217114216082](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217114216082.png)
+![image-20250217114216082](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217114216082.png)
 
 ### 存在的问题
 
-![image-20250217110535029](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217110535029.png)
+![image-20250217110535029](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217110535029.png)
 
 这个问题的根本原因是 **文件编码不匹配**。Java文件可能是以 **UTF-8** 编码保存的，但 `javac` 编译器默认使用的是 **GBK** 编码，导致无法正确解析文件中的中文字符。
 
@@ -445,7 +445,7 @@ javac -encoding UTF-8 test2.java
 - 在 Notepad++ 中：点击菜单栏的“编码” -> “转为 ANSI”（ANSI 在中文 Windows 下就是 GBK）。
 - 在 VS Code 中：点击右下角的编码（如 UTF-8），选择“通过编码保存”，然后选择 **GBK**。
 
-![image-20250217111754702](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217111754702.png)
+![image-20250217111754702](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217111754702.png)
 
 
 
@@ -522,7 +522,7 @@ public class ScannerDemo {
 }
 ```
 
-![image-20250217144015563](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217144015563.png)
+![image-20250217144015563](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217144015563.png)
 
 # 运算符
 
@@ -626,7 +626,7 @@ public class ArithmeticoperatorDemo2 {
 
 ### 隐式转换的两种提升规则
 
-![image-20250221103033942](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250221103033942.png)
+![image-20250221103033942](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250221103033942.png)
 
 数据类型不一样不能进行计算，需要转换成相同的数据才能进行计算
 
@@ -634,9 +634,9 @@ public class ArithmeticoperatorDemo2 {
 
 ### 强制转换
 
-![image-20250221105226896](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250221105226896.png)
+![image-20250221105226896](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250221105226896.png)
 
-![image-20250221105238924](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250221105238924.png)
+![image-20250221105238924](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250221105238924.png)
 
 ```Java
 byte b1 = 10;
@@ -696,7 +696,7 @@ int x = 10;
 
 ## **赋值运算符**
 
-![image-20250224111259589](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250224111259589.png)
+![image-20250224111259589](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250224111259589.png)
 
 ```JAVA
 	    //+=
@@ -740,7 +740,7 @@ int x = 10;
 
 ## **关系运算符**
 
-![image-20250224112346466](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250224112346466.png)
+![image-20250224112346466](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250224112346466.png)
 
 ```JAVA
 //  == 判断左右两边是否相等
@@ -804,7 +804,7 @@ public class OperatorTest {
 
 ## 逻辑运算符
 
-![image-20250226102226558](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250226102226558.png)
+![image-20250226102226558](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250226102226558.png)
 
 ```JAVA
 package Java_Concept;
@@ -848,7 +848,7 @@ public class LogicOperationDemo {
 
 在计算数据的时候，如果是全数字的是没有短路的，只能写一个
 
-![image-20250226110241489](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250226110241489.png)
+![image-20250226110241489](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250226110241489.png)
 
 ```java
 package Java_Concept;
@@ -884,7 +884,7 @@ public class LogicOperationDemo2 {
 }
 ```
 
-![image-20250226112305720](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250226112305720.png)
+![image-20250226112305720](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250226112305720.png)
 
 **Test**
 
@@ -980,7 +980,7 @@ public class Operator3Test2 {
 
 ## 运算符的优先级
 
-![image-20250228105243249](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228105243249.png)
+![image-20250228105243249](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228105243249.png)
 
 为了方便使用和提高阅读性，我们只需要知道小括号的优先级最高，运算时如果我们想要谁先运算那么我们就用小括号括起，这样方便管理和阅读
 
@@ -990,13 +990,13 @@ public class Operator3Test2 {
 
  正数的原码，反码，补码都是一样的
 
-![image-20250228110007053](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228110007053.png)
+![image-20250228110007053](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228110007053.png)
 
 
 
 ### 原码
 
-![image-20250228110026388](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228110026388.png)
+![image-20250228110026388](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228110026388.png)
 
 但是如果是负数计算，结果就会出错，实际运算的结果，跟我们预期的结果是相反的
 
@@ -1022,19 +1022,19 @@ public class Operator3Test2 {
 
 数据的存储和计算均是由补码进行计算的
 
-![image-20250228115705382](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228115705382.png)
+![image-20250228115705382](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228115705382.png)
 
 ### 补充
 
 1个字节8个bit位
 
-![image-20250228143356290](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228143356290.png)
+![image-20250228143356290](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228143356290.png)
 
-![image-20250228143537473](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228143537473.png)
+![image-20250228143537473](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228143537473.png)
 
-![image-20250228144052033](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228144052033.png)
+![image-20250228144052033](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228144052033.png)
 
-![image-20250228145155229](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228145155229.png)
+![image-20250228145155229](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228145155229.png)
 
 ![image-20250228145359020](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228145359020.png)
 
