@@ -68,9 +68,9 @@ exit
 
 ***例：***
 
-![image-20250104200142610](JAVA果子.assets/image-20250104200142610.png)
+![image-20250104200142610](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250104200142610.png)
 
-![image-20250104200130479](JAVA果子.assets/image-20250104200130479.png)
+![image-20250104200130479](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250104200130479.png)
 
 配置完成后切记重新打开cmd，类似更新当前环境。
 
@@ -132,7 +132,7 @@ public class test{
 
 ***例：***
 
-![image-20250104225313686](JAVA果子.assets/image-20250104225313686.png)
+![image-20250104225313686](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250104225313686.png)
 
 
 
@@ -140,11 +140,11 @@ public class test{
 
 虽然安装时会自动配置，但是只支持最基本的四个组件。需要使用其他组件的时候需要自己配置环境变量。如下所示
 
-![image-20250105194842642](JAVA果子.assets/image-20250105194842642.png)
+![image-20250105194842642](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250105194842642.png)
 
 
 
-![image-20250105194928979](JAVA果子.assets/image-20250105194928979.png)
+![image-20250105194928979](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250105194928979.png)
 
 
 
@@ -260,13 +260,13 @@ public class test{
 
 使用CMD的输出效果
 
-![image-20250109190829892](JAVA果子.assets/image-20250109190829892.png)
+![image-20250109190829892](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109190829892.png)
 
 
 
 使用Idea的输出效果
 
-![image-20250109190856255](JAVA果子.assets/image-20250109190856255.png)
+![image-20250109190856255](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109190856255.png)
 
 原因：在 **IDE 中**，制表符的效果受到 **编辑器设置和字体** 的影响。制表符的跳跃不一定是 8 字符的倍数，而是基于当前的显示设置（比如字体的宽度和行距）。这意味着如果你在字符串中使用制表符，制表符会根据当前的光标位置跳到下一个显示的制表位，而这个跳跃的间隔可能不是固定的。制表符（`\t`）并非所有环境都能完美地显示对齐。在 IDEA 或其他开发工具的控制台中，它可能并不会完全按照每 8 个字符的规则进行跳转，而是根据当前光标位置选择一个合适的对齐方式，这可能导致像 `haohao` 和 `23` 之间的位置看起来不一致。
 
@@ -305,11 +305,11 @@ public class test{
 
 ### 各进制的转换方法
 
-![image-20250109194921469](JAVA果子.assets/image-20250109194921469.png)
+![image-20250109194921469](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109194921469.png)
 
 
 
-![image-20250109195328498](JAVA果子.assets/image-20250109195328498.png)
+![image-20250109195328498](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250109195328498.png)
 
 
 
@@ -418,11 +418,11 @@ public class VariableTest {
 }
 ```
 
-![image-20250217114216082](JAVA果子.assets/image-20250217114216082.png)
+![image-20250217114216082](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217114216082.png)
 
 ### 存在的问题
 
-![image-20250217110535029](JAVA果子.assets/image-20250217110535029.png)
+![image-20250217110535029](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217110535029.png)
 
 这个问题的根本原因是 **文件编码不匹配**。Java文件可能是以 **UTF-8** 编码保存的，但 `javac` 编译器默认使用的是 **GBK** 编码，导致无法正确解析文件中的中文字符。
 
@@ -445,7 +445,7 @@ javac -encoding UTF-8 test2.java
 - 在 Notepad++ 中：点击菜单栏的“编码” -> “转为 ANSI”（ANSI 在中文 Windows 下就是 GBK）。
 - 在 VS Code 中：点击右下角的编码（如 UTF-8），选择“通过编码保存”，然后选择 **GBK**。
 
-![image-20250217111754702](JAVA果子.assets/image-20250217111754702.png)
+![image-20250217111754702](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217111754702.png)
 
 
 
@@ -522,9 +522,9 @@ public class ScannerDemo {
 }
 ```
 
-![image-20250217144015563](JAVA果子.assets/image-20250217144015563.png)
+![image-20250217144015563](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250217144015563.png)
 
-
+# 运算符
 
 ## 算数运算符
 
@@ -622,11 +622,11 @@ public class ArithmeticoperatorDemo2 {
 
 
 
-### 隐式转换和强制转换
+## 隐式转换和强制转换
 
 ### 隐式转换的两种提升规则
 
-![image-20250221103033942](JAVA果子.assets/image-20250221103033942.png)
+![image-20250221103033942](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250221103033942.png)
 
 数据类型不一样不能进行计算，需要转换成相同的数据才能进行计算
 
@@ -634,9 +634,9 @@ public class ArithmeticoperatorDemo2 {
 
 ### 强制转换
 
-![image-20250221105226896](JAVA果子.assets/image-20250221105226896.png)
+![image-20250221105226896](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250221105226896.png)
 
-![image-20250221105238924](JAVA果子.assets/image-20250221105238924.png)
+![image-20250221105238924](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250221105238924.png)
 
 ```Java
 byte b1 = 10;
@@ -646,7 +646,7 @@ byte b3 = (byte) (b1 + b2);
 
 
 
-### 字符串和字符加的操作
+## 字符串和字符加的操作
 
 %表示取模/取余
 
@@ -658,7 +658,7 @@ byte b3 = (byte) (b1 + b2);
 
 
 
-### 自增自减运算符
+## 自增自减运算符
 
 ++ 和 -- 既可以放在变量前，也可以放在变量后面
 
@@ -694,9 +694,9 @@ int x = 10;
 
 
 
-### **赋值运算符**
+## **赋值运算符**
 
-![image-20250224111259589](JAVA果子.assets/image-20250224111259589.png)
+![image-20250224111259589](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250224111259589.png)
 
 ```JAVA
 	    //+=
@@ -738,9 +738,9 @@ int x = 10;
 
 
 
-### **关系运算符**
+## **关系运算符**
 
-![image-20250224112346466](JAVA果子.assets/image-20250224112346466.png)
+![image-20250224112346466](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250224112346466.png)
 
 ```JAVA
 //  == 判断左右两边是否相等
@@ -802,9 +802,9 @@ public class OperatorTest {
 
 
 
-### 逻辑运算符
+## 逻辑运算符
 
-![image-20250226102226558](JAVA果子.assets/image-20250226102226558.png)
+![image-20250226102226558](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250226102226558.png)
 
 ```JAVA
 package Java_Concept;
@@ -844,9 +844,11 @@ public class LogicOperationDemo {
 
 
 
-###  短路逻辑运算符
+##  短路逻辑运算符
 
-![image-20250226110241489](JAVA果子.assets/image-20250226110241489.png)
+在计算数据的时候，如果是全数字的是没有短路的，只能写一个
+
+![image-20250226110241489](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250226110241489.png)
 
 ```java
 package Java_Concept;
@@ -882,7 +884,7 @@ public class LogicOperationDemo2 {
 }
 ```
 
-![image-20250226112305720](JAVA果子.assets/image-20250226112305720.png)
+![image-20250226112305720](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250226112305720.png)
 
 **Test**
 
@@ -916,7 +918,257 @@ public class LogicOperationTest {
 
 
 
-### 三元运算符
+## 三元运算符
+
+```JAVA
+package Java_Concept;
+
+public class OperatorDemo {
+    public static void main(String[] args) {
+        // 使用三元运算符获取两个数的较大值
+        // 三元运算符的结果必须被使用
+        int a = 10;
+        int b = 20;
+        int max = a > b ? a : b; // 判断a是否大于b，如果大于b，max=a，否则max=b
+        System.out.println(a > b? a : b);
+    }
+}
+```
+
+Test
+
+```java
+package Test;
+
+import java.util.Scanner;
+
+public class Operator3Test {
+    public static void main(String[] args) {
+        // 动物园里有两只老虎，体重分别通过键盘录入，请用程序实现判断两只老虎的体重是否相同
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("请输入第一只老虎的体重：");
+        int num1 = sc.nextInt();
+
+        System.out.println("请输入第二只老虎的体重：");
+        int num2 = sc.nextInt();
+
+        String result = num1 == num2 ? "相同" : "不同";
+
+        System.out.println(result);
+    }
+}
+```
+
+```JAVA
+package Test;
+
+public class Operator3Test2 {
+    public static void main(String[] args) {
+        // 已知三个和尚的身高分别为150cm、210cm、165cm，请用程序实现获取这三个和尚的最高身高。
+        int people1 = 150;
+        int people2 = 210;
+        int people3 = 165;
+        int max = people1 > people2? people1 : people2;
+        int max2 = max > people3? max : people3;
+        System.out.println(max2);
+    }
+}
+```
+
+
+
+## 运算符的优先级
+
+![image-20250228105243249](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228105243249.png)
+
+为了方便使用和提高阅读性，我们只需要知道小括号的优先级最高，运算时如果我们想要谁先运算那么我们就用小括号括起，这样方便管理和阅读
+
+
+
+# 原码，反码，补码
+
+ 正数的原码，反码，补码都是一样的
+
+![image-20250228110007053](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228110007053.png)
+
+
+
+### 原码
+
+![image-20250228110026388](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228110026388.png)
+
+但是如果是负数计算，结果就会出错，实际运算的结果，跟我们预期的结果是相反的
+
+
+
+### 反码
+
+为了解决原码不能计算负数的问题而出现的。
+
+计算规则：正数的反码不变，负数的反码在原码的基础上，符号位不变，数值取反，0变1，1变0
+
+弊端：负数运算的时候，如果结果不跨0，是没有任何问题的，但是如果结果跨0，跟实际结果会有1的偏差
+
+
+
+### 补码
+
+补码是为了解决负数计算时跨0的问题而出现的
+
+正数的补码不变，负数的补码在反码的基础上＋1
+
+另外补码还能多记录一个特殊的值-128，该数据在1个字节下，没有原码和反码
+
+数据的存储和计算均是由补码进行计算的
+
+![image-20250228115705382](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228115705382.png)
+
+### 补充
+
+1个字节8个bit位
+
+![image-20250228143356290](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228143356290.png)
+
+![image-20250228143537473](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228143537473.png)
+
+![image-20250228144052033](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228144052033.png)
+
+![image-20250228145155229](C:/Users/ziyix/Desktop/JAVA/JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228145155229.png)
+
+![image-20250228145359020](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228145359020.png)
+
+![image-20250228145421655](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250228145421655.png)
+
+
+
+# 判断语句和循环语句
+
+## if语句
+
+```JAVA
+package Test;
+
+
+import java.util.Scanner;
+
+public class IfTest {
+    public static void main(String[] args) {
+        // 如果小明这次考试得了第一名，我就做你女朋友
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("请输入你的考试排名：");
+
+        int score = sc.nextInt();
+
+        if(score == 1){
+            System.out.println("我能做你女朋友吗？");
+        }else{
+            System.out.println("挥手不是抱歉，而是牢弟还得练！");
+        }
+
+    }
+}
+```
+
+
+
+```JAVA
+package Java_Concept;
+
+import java.util.Scanner;
+
+public class IfDemo {
+    public static void main(String[] args) {
+        // 设某电影院，卖了100张票，票的序号为1~100，
+        // 其中奇数票为奇数号坐左侧，偶数票为偶数号坐右侧，
+        // 请编写程序，输入任意一个座位号，输出该座位号坐的人坐在左边还是坐在右边。
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入你的座位号：");
+        int seat = sc.nextInt();
+
+        if(seat > 0 && seat <= 100){
+            if(seat % 2 == 0){
+                System.out.println("你坐在右边");
+            }else{
+                System.out.println("你坐在左边");
+            }
+        }else{
+            System.out.println("你输入的座位号有误,输入范围为1~100");
+        }
+    }
+}
+```
+
+
+
+```Java
+package Test;
+
+public class IfTest2 {
+    public static void main(String[] args) {
+        // 汽车无人驾驶涉及到大量的判断。
+        // 当汽车遇到红绿灯的时候，就会进行判断
+        // 如果为红灯，就停止下来
+        // 如果为黄灯，就减速
+        // 如果为绿灯，就行驶通过
+
+        boolean isLightGreen = false;
+        boolean isLightYellow = false;
+        boolean isLightRed = true;
+
+        if(isLightGreen){
+            System.out.println("run!!!");
+        }
+        if(isLightYellow){
+            System.out.println("slow!!!");
+        }
+        if(isLightRed){
+            System.out.println("stop!!!");
+        }
+    }
+}
+```
+
+
+
+```JAVA
+package Test;
+
+import java.util.Scanner;
+
+public class IfTest3 {
+    public static void main(String[] args) {
+        // 需求
+        // 商场都有VIP制度，不同的会员有不同的折扣
+        // 键盘输入与会员的级别，并且计算出实际支付的前
+        // 会员1级，9折
+        // 会员2级，8折
+        // 会员3级，7折
+        // 非会员，无折扣
+        // 请编写程序，输入会员级别和原价，输出实际支付的价格
+
+        int price = 1000;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入你的会员级别：");
+        int level = sc.nextInt();
+        if(level < 1 || level > 3){
+            System.out.println("你输入的会员级别有误，输入范围为1~3");
+        }
+        if(level == 1){
+            System.out.println("实际支付的价格为：" + price * 0.9);
+        }else if(level == 2){
+            System.out.println("实际支付的价格为：" + price * 0.8);
+        }else if(level == 3){
+            System.out.println("实际支付的价格为：" + price * 0.7);
+        }
+    }
+}
+```
+
+
+
+## swich语句
 
 
 
