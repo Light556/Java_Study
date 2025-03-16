@@ -1170,6 +1170,235 @@ public class IfTest3 {
 
 ## swich语句
 
+**格式**
+
+![image-20250316154158513](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250316154158513.png)
+
+```JAVA
+package Java_Concept;
+
+public class SwitchDemo {
+    public static void main(String[] args) {
+        // 兰州拉面，武汉热干面，北京炸酱面，陕西油泼面
+
+        // 1.定义变量，记录我心里想吃的面
+        String noodles = "兰州拉面";
+
+        // 2.用这个面利用switch语句进行匹配
+        switch(noodles){
+            case "兰州拉面":
+                System.out.println("吃兰州拉面");
+                break;
+            case "武汉热干面":
+                System.out.println("吃兰州拉面");
+                break;
+            case "北京炸酱面":
+                System.out.println("吃兰州拉面");
+                break;
+            case "陕西油泼面":
+                System.out.println("吃兰州拉面");
+                break;
+
+                default:
+                    System.out.println("吃方便面");
+                    break;
+        }
+    }
+}
+```
+
+Test
+
+```JAVA
+package Test;
+
+import java.util.Scanner;
+
+public class SwitchTest {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请从1~7输入一个数字");
+        int day = sc.nextInt();
+        if(day<1||day>7){
+            System.out.println("输入错误,请重新输入");
+        }
+        switch(day){
+            case 1:
+                System.out.println("跑步");
+                break;
+            case 2:
+                System.out.println("游泳");
+                break;
+            case 3:
+                System.out.println("慢走");
+                break;
+            case 4:
+                System.out.println("动感单车");
+                break;
+            case 5:
+                System.out.println("拳击");
+                break;
+            case 6:
+                System.out.println("爬山");
+                break;
+            case 7:
+                System.out.println("好好吃一顿");
+                break;
+        }
+    }
+}
+```
+
+
+
+## swich的扩展
+
+**default的位置和省略**
+
+- 位置：defaule不一定是写在最下面的，我们可以写在任意位置。只不过习惯会写在最下面
+- 省略：defaule可以省略，语法不会有问题，但是不建议省略。
+
+**case穿透**
+	是语句体中没有写break导致的。
+**执行流程：**
+
+- 首先还是会拿着小括号中表达式的值跟下面每一个case进行匹配。
+- 如果匹配上了，就会执行对应的语句体，如果此时发现了break，那么结束整个switch语句。
+- 如果没有发现break，那么程序会继续执行下一个case的语句体，一直遇到break或者右大括号为止。
+
+**使用场景：**
+	如果多个case的语句体重复了，那么我们考虑利用case穿透去简化代码。
+
+**switch新特性**
+
+方法需求：JDK12
+
+```JAVA
+int number = 10;
+switch(number){
+	case 1 -> System.out.println("一");
+	case 2 -> System.out.println("二");
+	case 3 -> System.out.println("三");
+	default -> System.out.println("没有这种选项");
+}
+```
+
+ 
+
+switch 和 if 第三种格式各自的使用场景
+
+if 的第三种格式：一般用于对范围的判断
+
+switch：把有限个数据一一列举出来，让我们任选其一
+
+```JAVA
+int score = 100;
+if(score >= 90 && score <= 100){
+	System.out.println("送自行车")
+}
+```
+
+Test1
+
+```JAVA
+package Test;
+
+import java.util.Scanner;
+
+public class SwitchPlusTest {
+    public static void main(String[] args) {
+        // 需求:键盘录入星期数，输出工作日，休息日。
+        // (1-5)工作日,(6-7)休息日
+        Scanner sc = new Scanner(System.in);
+        System.out.println("输入一个1-7的整数");
+        int week = sc.nextInt();
+//        if(week<1||week>7){
+//            System.out.println("输入错误，请重新输入");
+//        }
+//        switch(week){
+//            case 1:
+//                System.out.println("是工作日");
+//            case 2:
+//                System.out.println("是工作日");
+//            case 3:
+//                System.out.println("是工作日");
+//            case 4:
+//                System.out.println("是工作日");
+//            case 5:
+//                System.out.println("是工作日");
+//            case 6:
+//                System.out.println("是休息日");
+//            case 7:
+//                System.out.println("是休息日");
+//            default:
+//                System.out.println("输入错误，请重新输入");
+//        }
+        // 仅仅支持jdk14
+        switch(week){
+            case 1,2,3,4,5:
+                System.out.println("是工作日");
+                break;
+            case 6,7:
+                System.out.println("是休息日");
+                break;
+        }
+    }
+}
+```
+
+Test2
+
+```java
+package Test;
+
+import java.util.Scanner;
+
+public class SwitchPlusTest2 {
+    public static void main(String[] args) {
+//        需求:键盘录入一个1-4的整数
+//        输出提示：1机票查询，2机票预定，3机票改签，4退出服务，其他按键也是退出服务。
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入一个1-4的整数");
+        int num = sc.nextInt();
+//        switch (num){
+//            case 1:
+//                System.out.println("机票查询");
+//                break;
+//            case 2:
+//                System.out.println("机票预定");
+//                break;
+//            case 3:
+//                System.out.println("机票改签");
+//                break;
+//            case 4:
+//                System.out.println("退出服务");
+//                break;
+//            default:
+//                System.out.println("退出服务");
+//                break;
+//        }
+        switch (num){
+            case 1 -> System.out.println("机票查询");
+            case 2 -> System.out.println("机票预定");
+            case 3 -> System.out.println("机票改签");
+            default -> System.out.println("退出服务");
+        }
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
