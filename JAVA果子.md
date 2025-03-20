@@ -472,6 +472,7 @@ import java.util.Scanner;
 public class ScannerDemo {
     public static void main(String[] args) {
         // 创建对象
+        // System.in 默认情况下连接到键盘输入，用于从控制台读取用户输入的数据。
         Scanner sc = new Scanner(System.in);
 
         System.out.println("请输入数据");
@@ -1388,6 +1389,153 @@ public class SwitchPlusTest2 {
 ```
 
 
+
+## for循环格式和练习
+
+**格式**
+
+```
+for(初始化语句;条件判断语句;条件控制语句){
+	循环体语句;
+}
+ //初始化语句只执行一次
+```
+
+```JAVA
+for(int i = 1; i <= 10; i++){
+	System.out.println("HaoHao");
+}
+```
+
+![image-20250320151637447](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250320151637447.png)
+
+
+
+**Test1**
+
+```JAVA
+package Test;
+
+public class ForTest {
+    public static void main(String[] args) {
+        // 需求：求1-5之间的和
+        int sum = 0;
+        for(int i = 1; i <= 5; i++){
+            // 求和的变量不能定义在循环的，因为变量只在所属的大括号中有效
+            // 如果定义在循环里面的话，变量只能在单次循环中有效，本次循环结束后，就会重新定义这个变量
+            // int sum = 0;
+           sum = sum + i; //sum += i;
+        }
+        System.out.println(sum);
+    }
+}
+```
+
+
+
+**Test2**
+
+```java
+package Test;
+
+import java.util.Scanner;
+
+public class ForTest3 {
+    public static void main(String[] args) {
+        // 需求：键盘录入两个数字，表示一个范围。统计这个范围中。既能被3整除，又能被5整除数字有多少个?
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入第一个数字表示：");
+        int start = sc.nextInt();
+        System.out.println("请输入第二个数字表示：");
+        int end = sc.nextInt();
+        int count = 0;
+        for(int i = start; i <= end; i++){
+            if(i % 3 == 0 && i % 5 == 0){
+                count++;
+                System.out.println("能被3整除，又能被5整除数字为：");
+                System.out.println(i);
+            }
+        }
+        System.out.println("这个范围内，既能被3整除，又能被5整除数字有" + count + "个");
+    }
+}
+```
+
+
+
+## while循环语句
+
+**格式**
+
+```
+初始化语句;
+while(条件判断语句){
+	循环体语句;
+	条件控制语句;
+}
+```
+
+![image-20250320160251956](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250320160251956.png)
+
+**Test1**
+
+```JAVA
+package Java_Concept;
+
+public class WhileDemo {
+    public static void main(String[] args) {
+        // 需求：利用while语句1-100之间的和
+        int sum = 0;
+        int i = 1;
+        while(i <= 100){
+            sum += i;
+            i++;
+        }
+        System.out.println(sum);
+    }
+}
+```
+
+
+
+## for 和 while 的对比
+
+**相同点**：运行的规则是一样的
+
+**不同点1**
+
+- for循环中，控制循环的变量，因为归属for循环的语法结构中，在for循环结束后，就不能再次被访问到了。
+- while循环中，控制循环的变量，对于while循环来说不归属其语法结构中，在while循环结束后，该变量还可以继续使用。
+
+**不同点2**
+
+- for循环中：知道循环的次数或者循环的范围。
+- while循环：不知道循环的次数和范围，只知道循环的结束条件。
+
+
+
+**Test**
+
+```JAVA
+package Test;
+
+public class WhileTest {
+    public static void main(String[] args) {
+        /*
+         * 需求：世界最高山峰是珠穆朗玛峰（8844.43米=8844430毫米)
+         * 假如我有一张足够大的纸，它的厚度是0.1毫米。
+         * 请问，我折叠多少次，可以折成珠穆朗玛峰的高度？
+         */
+        double thick = 0.1;
+        int i = 0;
+        while(thick <= 8844430){
+            thick *= 2;
+            i++;
+        }
+        System.out.println("一共需要折叠" + i + "次");
+    }
+}
+```
 
 
 
