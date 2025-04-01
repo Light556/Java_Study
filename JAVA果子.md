@@ -649,13 +649,13 @@ byte b3 = (byte) (b1 + b2);
 
 ## 字符串和字符加的操作
 
-%表示取模/取余
+%表示取模（取余）得到的是余数  而 / 是除法  
 
 整数操作只能得到整数，想要得到小数必须要有浮点数参与运算
 
 当字符＋字符 或 字符＋数字的时候，会把字符通过ASCII码表查询到对应的数字后进行计算
 
-
+字符串+字符串，就是直接拼凑在一起
 
 
 
@@ -931,7 +931,7 @@ public class OperatorDemo {
         int a = 10;
         int b = 20;
         int max = a > b ? a : b; // 判断a是否大于b，如果大于b，max=a，否则max=b
-        System.out.println(a > b? a : b);
+        System.out.println(max);
     }
 }
 ```
@@ -1421,7 +1421,7 @@ public class ForTest {
         // 需求：求1-5之间的和
         int sum = 0;
         for(int i = 1; i <= 5; i++){
-            // 求和的变量不能定义在循环的，因为变量只在所属的大括号中有效
+            // 求和的变量不能定义在循环内部的，因为变量只在所属的大括号中有效
             // 如果定义在循环里面的话，变量只能在单次循环中有效，本次循环结束后，就会重新定义这个变量
             // int sum = 0;
            sum = sum + i; //sum += i;
@@ -1536,6 +1536,568 @@ public class WhileTest {
     }
 }
 ```
+
+
+
+Test2
+
+```JAVA
+package Test;
+
+import java.util.Scanner;
+
+public class WhileTest2 {
+    public static void main(String[] args) {
+        // 判断一个数是否是回文数
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入一个至少三位的整数：");
+        int x = sc.nextInt();
+        int temp = x;
+        int num = 0;
+        while(x != 0){
+            int ge = x % 10;
+            x /= 10;
+            num = num * 10 + ge;
+        }
+        System.out.println(num);
+        if(num == temp){
+            System.out.println("是回文数");
+        }else{
+            System.out.println("不是回文数");
+        }
+    }
+}
+```
+
+
+
+Test3
+
+```JAVA
+package Test;
+
+import java.util.Scanner;
+
+public class WhileTest3 {
+    public static void main(String[] args) {
+        // 需求：给定两个整数，被除数和除数(都是正数，且不超过int的范围)
+        // 将两数相除，要求不能使用乘法，除法和模运算符
+        // 计算商和余数
+        Scanner sc = new Scanner(System.in);
+        System.out.println("被除数和除数(都是正数，且不超过int的范围)");
+        System.out.println("请输入被除数：");
+        int a = sc.nextInt();
+        System.out.println("请输入除数：");
+        int b = sc.nextInt();
+
+        int count = 0;
+        while(a >= b){
+           a = a-b;
+           count++;
+        }
+         System.out.println("余数为:" + a);
+         System.out.println("商为:" + count);
+    }
+}
+```
+
+
+
+## do...while 循环
+
+![image-20250325101107770](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250325101107770.png)
+
+
+
+# 循环高级综合练习
+
+
+
+## 无限循环
+
+**注意事项:**
+无限循环的代码后面不能写任何代码，因为循环无限执行
+
+```JAVA
+package Java_Concept;
+
+public class InfiniteLoop {
+    public static void main(String[] args) {
+        // for 无限循环
+//        for(;;){
+//            System.out.println("Hello World!");
+//        }
+        // while格式的无限循环
+        while (true){
+            System.out.println("haohao");
+        }
+    }
+}
+```
+
+
+
+## 跳过某一次循环
+
+```Java
+package Test;
+
+public class InfiniteTest {
+    public static void main(String[] args) {
+        // 跳过某一次循环
+        for(int i = 1; i <= 5; i++){
+            if (i==3){
+                // 结束本次循环，开始下一次循环
+                continue;
+            }
+            System.out.println("这是第" + i + "次循环");
+        }
+    }
+}
+```
+
+
+
+## 跳转控制语句
+
+```JAVA
+package Java_Concept;
+
+public class JumpControl {
+    public static void main(String[] args) {
+        // 2.结束整个循环
+        for(int i =1; i <= 5; i++){
+            if(i == 3){
+                break;
+            }
+            System.out.println("这是第" + i + "次循环");
+        }
+    }
+}
+```
+
+
+
+## 练习
+
+### 逢七过
+
+```JAVA
+package Test;
+
+public class LoopTests {
+    public static void main(String[] args) {
+        // 逢七过
+        // 规则：从任意一个数字开始报数，当年要报的数字是包含7或者是7的倍数时，都要说过
+        // 需求：使用程序在控制台打印出1-100之间的满足封七过规则的数据
+        for(int i = 1; i <= 100; i++){
+            if( i % 7 == 0 || i % 10 == 7 || i / 10 == 7){
+                System.out.println("这是数字" + i + "过");
+            }
+        }
+    }
+}
+```
+
+
+
+### 求平方根
+
+```JAVA
+package Test;
+
+import java.util.Scanner;
+
+public class SquareRootTest {
+    public static void main(String[] args) {
+        //  需求：键盘输入一个大于等于2的整数X，并计算返回X的平方根，结果只保留整数部分，小数部分被舍去
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入一个大于等于2的整数X: ");
+        int x = sc.nextInt();
+
+        for(int i = 1; i<=x; i++){
+            if(i*i == x){
+                System.out.println("X的平方根为: " + i);
+                break;
+            }else if(i*i > x){
+                System.out.println("X的平方根为: " + (i-1));
+                break;
+            }
+        }
+    }
+}
+```
+
+
+
+### 求质数
+
+```JAVA
+package Test;
+
+import java.util.Scanner;
+
+public class PrimeNumberTest {
+    public static void main(String[] args) {
+        //  需求：键盘输入一个正整数x，判断该整数是否为一个质数
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入一个正整数x: ");
+        int x = sc.nextInt();
+        boolean flag = true;
+        for(int i = 2; i<x; i++){
+            if(x % i == 0){
+                flag=false;
+                break;
+            }
+        }
+        if(flag){
+            System.out.println("x是质数");
+        }else{
+            System.out.println("x不是质数");
+        }
+    }
+}
+```
+
+
+
+### 猜数字
+
+```JAVA
+package Test;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class GuessNumTest {
+    public static void main(String[] args) {
+        // 需求:程序自动生成一个1-100之间的随机数字，使用程序实现猜出这个数字是多少
+        Random r = new Random();
+        int num = r.nextInt(100) + 1;
+
+        Scanner sc = new Scanner(System.in);
+        while(true){
+          System.out.println("猜一个数字");
+          int guessNumber = sc.nextInt();
+          if(guessNumber > num){
+              System.out.println("猜大了");
+          }else if(guessNumber < num){
+              System.out.println("猜小了");
+          }else{
+              System.out.println("猜对了");
+              break;
+          }
+        }
+    }
+}
+```
+
+
+
+# 数组
+
+数组指的是一种容器，可以用来存储同种数据类型的多个值
+
+![image-20250401083005809](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250401083005809.png)
+
+
+
+**定义**
+
+![image-20250401083210172](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250401083210172.png)
+
+
+
+## 数组的静态初始化
+
+![image-20250401083452571](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250401083452571.png)
+
+
+
+**简化格式**
+
+![image-20250401083514349](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250401083514349.png)
+
+数组创建完成后，数组的长度就不会发生变化了，如上图定义了三个长度，那么就定死了
+
+Test
+
+```java
+package Java_Concept;
+
+public class ArrayDemo {
+    public static void main(String[] args) {
+        // 1.定义数组存储五个学生的年龄
+        int[] ages1 = new int[]{11,12,13};
+        int[] ages2 = {11,12,13};
+        // 2.定义数组存储三个学生的姓名
+        String[] names1 = new String[] {"haohao","xiaohua","xiaoming"};
+        String[] names2 = {"haohao","xiaohua","xiaoming"};
+
+        // 3.定义数组存储四个学生的身高
+        double[] heights1 = new double[]{170.3,175.6,180};
+        double[] heights2 = {170.3,175.6,180};
+        
+        System.out.println(heights2); // [D@776ec8df 输出的是数组的地址值
+        System.out.println(ages1); // [I@4eec7777
+    }
+}
+```
+
+
+
+## 扩展地址值的含义
+
+内存的地址值表示数组在内存中的位置
+
+[D@776ec8df
+
+[ : 表示当前是一个数组
+
+D：表示当前数组里面元素都是double类型的     第二个中 I 表示的是数组中的元素都是int 类型的
+
+@：表示一个间隔符号。（没有特殊含义，固定格式）
+
+776ec8df：数组的真正的地址值（十六进制）
+
+平时我们会习惯性的把这个整体叫做数组的地址值
+
+
+
+## 数组元素访问
+
+索引：也叫下标，角标。
+
+索引的特点：从0开始，逐个+1增长，连续不间断
+
+![image-20250401085908899](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250401085908899.png)
+
+
+
+Test
+
+```JAVA
+package Java_Concept;
+
+public class ArrayDemo2 {
+    public static void main(String[] args) {
+        // 利用索引对数组中的元素进行访问
+        // 1.获取数组中的元素
+        // 格式：数组名[索引]
+
+        int[] array1 = {12,13,14};
+        System.out.println(array1[0]); // 12
+
+        // 2.把数据存储到数组当中
+        // 格式：数组名[索引] = 具体的数值/变量
+        array1[1] = 15;
+        System.out.println(array1[1]); // 15
+    }
+}
+```
+
+
+
+## 数组的遍历
+
+将数组中所有内容取出来，取出来之后可以打印，求和，判断...
+
+注意：遍历指的是取出数据的过程，不要局限理解为遍历就是打印。
+
+```java
+package Java_Concept;
+
+public class ArrayDemo3 {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5,8,9,10};
+        for(int i = 0; i < arr.length; i++){
+            System.out.println(arr[i]);
+        }
+    }
+}
+```
+
+扩展：
+
+自动的快速生成数组的遍历方式
+
+idea提供的，**数组名.fori** 可以自动补全
+
+
+
+### 三道练习题
+
+Test1
+
+```JAVA
+package Test;
+
+public class ArrayTest {
+    public static void main(String[] args) {
+        // 定义一个数组，存储1，2，3，4，5
+        // 遍历数组得到每一个元素，求数组中所有数据的和
+        int[] arr = {1, 2, 3, 4, 5};
+        int sum = 0;
+        for(int i = 0; i < arr.length; i++){
+            sum += arr[i];
+        }
+        System.out.println(sum);
+    }
+}
+```
+
+
+
+Test2
+
+```java
+package Test;
+
+public class ArrayTest2 {
+    public static void main(String[] args) {
+        // 定义一个数组，存储1，2，3，4，5，6，7，8，9，10
+        // 遍历数组得到每一个元素，统计数组里面一共有多少个能被3整除的数字
+        int[]arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int count = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] % 3 == 0){
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
+```
+
+
+
+Test3
+
+```JAVA
+package Test;
+
+public class ArrayTest3 {
+    public static void main(String[] args) {
+        // 定义一个数组，存储1，2，3，4，5，6，7，8，9，10
+        // 遍历数组得到每个元素
+        // 要求：
+        // 1.如果是奇数，则将当前数字扩大两倍
+        // 2.如果是偶数，则将当前数字变成二分之一
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] % 2 != 0){
+                arr[i] *= 2;
+            }else if(arr[i] % 2 == 0){
+                arr[i] /= 2;
+            }
+            // 在这写也可以，但是我们要养成一个循环只干一件事情，以维持清晰的思路
+           // System.out.println(arr[i]);
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+}
+```
+
+
+
+## 数组的动态初始化
+
+![image-20250401103840105](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250401103840105.png)
+
+Test
+
+```JAVA
+package Java_Concept;
+
+public class ArrayDemo4 {
+    public static void main(String[] args) {
+        // 定义一个数组，用来存储班上50个学生的姓名，姓名未知，报道后再进行添加
+        String[] arr = new String[50];
+        arr[0] = "haohao";
+        arr[1] = "zhangsan";
+
+        System.out.println(arr[0]);
+        System.out.println(arr[1]);
+        System.out.println(arr[2]); // 打印的是初始值，为null
+
+        int[] arr2 = new int[3];
+        System.out.println(arr2[0]); // 打印初始值，为0
+        System.out.println(arr2[1]); // 0
+    }
+}
+```
+
+
+
+### 数组默认初始化值的规律
+
+字符串类型：默认初始化值为 null
+
+整数类型：默认初始化值为 0
+
+小数类型：默认初始化值为 0.0
+
+字符类型：默认初始化值为 ' \u0000 ' 空格
+
+布尔类型：默认初始化值为 false
+
+引用数据类型：默认初始化值为 null
+
+
+
+## 动态初始化和静态初始化的区别
+
+- 动态初始化：手动指定数组长度，由系统给出默认初始化值。
+- 静态初始化：手动指定数组元素，系统会根据元素个数，计算出数组的长度。
+
+![image-20250401105711891](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250401105711891.png)
+
+
+
+## 数组的常见问题
+
+### 索引越界
+
+当访问了数组中不存在的索引，就会引发索引越界异常。
+
+```JAVA
+package Java_Concept;
+
+public class ArrayDemo5 {
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5};
+        System.out.println(arr[6]);
+    }
+}
+```
+
+报错如下
+
+```
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 6 out of bounds for length 5
+	at Java_Concept.ArrayDemo5.main(ArrayDemo5.java:6)
+```
+
+
+
+## 数组常见操作
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
