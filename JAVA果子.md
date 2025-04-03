@@ -2085,17 +2085,163 @@ Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 6 out
 
 ## 数组常见操作
 
+### 求最值
+
+```JAVA
+package Test;
+
+public class ArrayTest4 {
+    public static void main(String[] args) {
+        // 定义数组求最大值:33，5，22，44，55
+        int[] a = {33,5,22,55,44};
+        int max = a[0];
+        for (int i = 0; i < a.length; i++) {
+            if(a[i]>max){
+                max = a[i];
+            }
+        }
+        System.out.println(max);
+    }
+}
+```
+
+求最小值同上
 
 
 
+### 遍历数组求和
+
+```JAVA
+package Test;
+
+import java.util.Random;
+
+public class ArrayTest5 {
+    public static void main(String[] args) {
+        // 需求：生成10个1~100之间的随机数存入数组
+        // 1，求出所有数据的和
+        // 2，求出所有数据的平均数
+        // 3，统计有多少个数据比平均值小
+
+        int[] arr = new int[10];
+        Random r = new Random();
+        for (int i = 0; i < arr.length; i++) {
+            int number = r.nextInt(100) + 1;
+            arr[i] = number;
+        }
+
+        // 1，求出所有数据的和
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        System.out.println(sum);
+        // 2.求出所有数据的平均数
+        int avg = sum / arr.length;
+        System.out.println(avg);
+        // 3.统计有多少个数据比平均值小
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] < avg){
+                count++;
+            }
+        }
+        System.out.println(count);
+
+    }
+}
+```
 
 
 
+### 交换数组中的数据
+
+```JAVA
+package Test;
+
+public class ArrayTest6 {
+    public static void main(String[] args) {
+        // 需求:定义一个数组，存入1，2，3，4，5。交换首尾索引对应的元素。
+        // 交换前：1，2，3，4，5
+        // 交换后：5，4，3，2，1
+
+        int[] arr = {1,2,3,4,5};
+        for(int i = 0, j = arr.length - 1; i < j; i++,j--){
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i] + " ");
+        }
+    }
+}
+```
 
 
 
+### 打乱数组中的数据
+
+```JAVA
+package Test;
+
+import java.util.Random;
+
+public class ArrayTest7 {
+    public static void main(String[] args) {
+        // 需求：定义一个数组，存入1，2，3，4，5。要求打乱数组中所有数据的顺序。
+
+        int[] arr = {1,2,3,4,5};
+        Random r = new Random();
+        for(int i = 0; i < arr.length; i++){
+            int RandomIndex = r.nextInt(arr.length);
+            int temp = arr[i];
+            arr[i] = arr[RandomIndex];
+            arr[RandomIndex] = temp;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+```
 
 
+
+## 内存图
+
+### Java内存分配
+
+![image-20250403152704375](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250403152704375.png)
+
+- 栈：方法运行时使用的内存，比如main方法运行，进入方法栈中执行
+- 堆：存储对象或者数组，new来创建的，都存储在堆内存
+- 方法区：存储可以运行的class文件
+- 本地方法栈：JVM在使用操作系统功能的时候使用，和我们开发无关
+- 寄存器：给CPU使用，和我们开发无关
+
+![image-20250403153502388](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250403153502388.png)
+
+
+
+### 数组的内存图
+
+1. 只要是new出来的一定是在堆里面开辟了一个小空间
+2. 如果new了多次，那么在堆里面有多个小空间，每个小空间中都有各自的数据
+
+![image-20250403161325504](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250403161325504.png)
+
+
+
+### 两个数组指向同一个空间的内存图
+
+当两个数组指向同一个小空间时，其中一个数组对小空间中的值发生了改变，那么其他数组再次访问的时候都是修改之后的结果了。
+
+![image-20250403162411669](JAVA%E6%9E%9C%E5%AD%90.assets/image-20250403162411669.png)
+
+
+
+# 方法
 
 
 
